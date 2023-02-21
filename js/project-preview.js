@@ -392,7 +392,7 @@ class extends HTMLElement {
         this.#cover_dialog_objs.cover.src = this.getAttribute("cover");
         this.#cover_dialog_objs.close.src = this.#icons.close;
         if(!this.hasAttribute("demo")) {
-            this.#demo.style.display = "none";
+            this.#demo.remove();
         } else {
             this.#demo.href = this.getAttribute("demo");
         }
@@ -422,7 +422,7 @@ class extends HTMLElement {
             this.#platforms.append(platform_container);
         })
         if(!this.hasAttribute("mention")) {
-            this.#mention.style.display = "none";
+            this.#mention.remove();
         } else {
             this.#mention.href = this.getAttribute("mention");
             let link = new URL(this.getAttribute("mention"));
