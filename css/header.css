@@ -1,0 +1,15 @@
+header ul {
+    display: flex;
+    list-style-type: none;
+    column-gap: 15px;
+}
+
+header ul a {
+    text-decoration: none;
+}
+
+.header__skip-main-content:not(:focus) {
+    position: fixed;
+    top: -32000px;
+    left: -32000px;
+}

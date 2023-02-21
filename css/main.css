@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+body {
+    margin: 0px;
+    background: #697556;
+}
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+    color: #ffffff;
+}
+
+project-preview {
+    width: 90vw;
+    height: 60vh;
+    left: 5%;
+    margin-bottom: 50px;
+}
+
+project-preview:nth-child(2n+1) {
+    background: #6EB800;
+}
+
+project-preview:nth-child(2n) {
+    background: #00AFB8;
+}
+
+social-media {
+    margin-bottom: 20px;
+}
+
+#about-me {
+    position: relative;
+    width: 90vw;
+    left: 5%;
+    margin-bottom: 50px;
+    font-size: 1.5vw;
+    line-height: 2vw;
+}
+
+#about-me .slogan {
+    font-size: 2.5vw;
+    line-height: 3vw;
+}
+
+@media screen and (max-width: 1000px) {
+    #about-me {
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+    
+    #about-me .slogan {
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+}
