@@ -102,6 +102,7 @@ class extends HTMLElement {
         this.#source = document.createElement("a");
         this.#source.className = "source icon";
         this.#source.target = "_blank";
+        this.#source.setAttribute("aria-label", "Browse the source");
         this.#source.tabIndex = 11;
         this.#source.append(source_image);
         info_section.append(this.#source);
@@ -125,6 +126,7 @@ class extends HTMLElement {
         this.#demo.className = "demo icon";
         this.#demo.target = "_blank";
         this.#demo.append(demo_image);
+        this.#demo.setAttribute("aria-label", "Let's see the demo");
         this.#demo.tabIndex = 10;
         info_section.append(this.#demo);
 
@@ -197,6 +199,7 @@ class extends HTMLElement {
         this.#mention = document.createElement("a");
         this.#mention.className = "mention icon";
         this.#mention.target = "_blank";
+        this.#mention.setAttribute("aria-label", "View the mention");
         this.#mention.append(mention_image);
         this.#mention.tabIndex = 8;
         info_section.append(this.#mention);
