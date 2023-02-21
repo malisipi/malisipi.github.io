@@ -18,18 +18,22 @@ class extends HTMLElement {
         root.className = "root";
 
         this.#github = document.createElement("a");
+        this.#github.setAttribute("aria-label", "Open Github");
         this.#github.className = "icon";
         let github_icon = document.createElement("img");
         github_icon.src = this.#icons.github;
         github_icon.className = "icon";
+        github_icon.alt = "github";
         this.#github.append(github_icon);
         root.append(this.#github);
 
         this.#mail = document.createElement("a");
+        this.#mail.setAttribute("aria-label", "Send a Mail");
         this.#mail.className = "icon";
         let mail_icon = document.createElement("img");
         mail_icon.src = this.#icons.mail;
         mail_icon.className = "icon";
+        mail_icon.alt = "mail";
         this.#mail.append(mail_icon);
         root.append(this.#mail);
 
