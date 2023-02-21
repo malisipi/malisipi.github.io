@@ -2,7 +2,7 @@
 
 body {
     margin: 0px;
-    background: #697556;
+    background: #3E4937;
 }
 
 * {
@@ -18,11 +18,11 @@ project-preview {
 }
 
 project-preview:nth-child(2n+1) {
-    background: #6EB800;
+    background: #4D8000;
 }
 
 project-preview:nth-child(2n) {
-    background: #00AFB8;
+    background: #00828A;
 }
 
 social-media {
