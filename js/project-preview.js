@@ -60,6 +60,7 @@ class extends HTMLElement {
         this.#cover_dialog_objs.close.addEventListener("click", (e, root=this)=>{root.close_cover();});
         this.#cover_dialog_objs.close.addEventListener("keypress", (e, root=this)=>{if(e.key=="Enter" || e.key==" ") root.close_cover();})
         this.#cover_dialog_objs.close.setAttribute("draggable",false);
+        this.#cover_dialog_objs.close.alt = "Close";
         this.#cover_dialog_objs.close.tabIndex = 1;
 
         let dialog_cover_container = document.createElement("div");
@@ -67,6 +68,7 @@ class extends HTMLElement {
 
         this.#cover_dialog_objs.cover.className = "dialog_cover";
         this.#cover_dialog_objs.cover.setAttribute("draggable",false);
+        this.#cover_dialog_objs.cover.alt = "Cover";
 
         this.#cover_dialog.append(this.#cover_dialog_objs.close);
         dialog_cover_container.append(this.#cover_dialog_objs.cover);
@@ -93,6 +95,7 @@ class extends HTMLElement {
 
         let source_image = document.createElement("img");
         source_image.className = "icon"
+        source_image.alt = "source";
         source_image.setAttribute("draggable",false);
         source_image.src = this.#icons.source;
 
@@ -106,6 +109,7 @@ class extends HTMLElement {
         this.#cover = document.createElement("img");
         this.#cover.setAttribute("draggable",false);
         this.#cover.className = "cover";
+        this.#cover.alt = "cover";
         this.#cover.addEventListener("click", (e, root=this)=>{root.show_cover();})
         this.#cover.addEventListener("keypress", (e, root=this)=>{if(e.key=="Enter" || e.key==" ") root.show_cover();})
         this.#cover.tabIndex = 4;
@@ -113,6 +117,7 @@ class extends HTMLElement {
 
         let demo_image = document.createElement("img");
         demo_image.className = "icon"
+        demo_image.alt = "demo";
         demo_image.setAttribute("draggable",false);
         demo_image.src = this.#icons.demo;
 
@@ -129,6 +134,7 @@ class extends HTMLElement {
         
         let license_icon = document.createElement("img");
         license_icon.className = "icon";
+        license_icon.alt = "license";
         license_icon.setAttribute("draggable",false);
         license_icon.src = this.#icons.license;
 
@@ -146,7 +152,8 @@ class extends HTMLElement {
         this.#stars_section.setAttribute("special-title","Stars");
 
         let stars_icon = document.createElement("img");
-        stars_icon.className = "icon"
+        stars_icon.className = "icon";
+        stars_icon.alt = "stars";
         stars_icon.setAttribute("draggable",false);
         stars_icon.src = this.#icons.stars;
 
@@ -162,6 +169,7 @@ class extends HTMLElement {
 
         let forks_icon = document.createElement("img");
         forks_icon.className = "icon"
+        forks_icon.alt = "forks";
         forks_icon.setAttribute("draggable",false);
         forks_icon.src = this.#icons.forks;
 
@@ -181,7 +189,8 @@ class extends HTMLElement {
 
 
         let mention_image = document.createElement("img");
-        mention_image.className = "icon"
+        mention_image.className = "icon";
+        mention_image.alt = "mention";
         mention_image.setAttribute("draggable",false);
         mention_image.src = this.#icons.mention;
 
@@ -411,7 +420,8 @@ class extends HTMLElement {
             let platform_container = document.createElement("div");
 
             let platform_icon = document.createElement("img");
-            platform_icon.className = "icon"
+            platform_icon.className = "icon";
+            platform_icon.alt = platform;
             platform_icon.setAttribute("draggable",false);
             platform_icon.src = this.#icons.platforms[platform];
 
