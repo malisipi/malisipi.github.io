@@ -46,7 +46,7 @@ for line in template:
             for project in projects:
                 old_browsers_html += f"""<div class="project-preview">
     <h3>{project.get("name")}</h3>
-    <p>{project.get("name")}</p>
+    <p>{project.get("description")}</p>
     <div><a href="{project.get("cover").replace("covers","covers-png").replace(".webp",".png")}" target="_blank"><img class="cover" draggable="false" src="{project.get("cover").replace("covers","covers-png").replace(".webp",".png")}" /></a></div>
     {create_button_macro(project.get("source"), "Source", "assets/tango/package-x-generic.png")}
     {create_button_macro(project.get("demo"), "Demo", "assets/tango/applications-internet.png")}
