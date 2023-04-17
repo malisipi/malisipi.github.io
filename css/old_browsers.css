@@ -1,0 +1,21 @@
+body {
+    background: #808080;
+}
+
+.cover {
+    width: 80%;
+}
+
+img {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, .cover {
+    background-color: #c0c0c0;
+    border-style: outset;
+    border-color: #eeeeee #444444 #444444 #eeeeee;
+}

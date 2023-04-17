@@ -26,6 +26,23 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/project-preview.js"></script>
     <script src="js/social-media.js"></script>
+    <script type = "text/javascript">
+        <!--
+            function open_old_browsers_page () {
+                location.href=location.protocol+"//"+location.host+"/old_browsers.html";
+            };
+        //-->
+        try {
+            if(ShadowRoot==undefined || navigator.userAgent.search("Trident")!=-1){
+                open_old_browsers_page();
+            }
+        } catch (error) {
+            open_old_browsers_page();
+        }
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=old_browsers.html">
+    </noscript>
 </head>
 <body>
     <header>
