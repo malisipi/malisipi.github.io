@@ -3,6 +3,7 @@
 body {
     margin: 0px;
     background: #3E4937;
+    scroll-behavior: smooth;
 }
 
 * {
