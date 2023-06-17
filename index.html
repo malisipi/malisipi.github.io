@@ -48,7 +48,10 @@
             if(ShadowRoot==undefined || navigator.userAgent.search("Trident")!=-1){
                 open_old_browsers_page();
             }
-            if(navigator.language.toLowerCase().includes("tr")) document.body.setAttribute("türkçe", true);
+            if(navigator.language.toLowerCase().includes("tr")){
+                document.body.setAttribute("türkçe", true)
+                document.title = "malisipi'nin İnternet Sitesi"
+            };
         } catch (error) {
             open_old_browsers_page();
         }
