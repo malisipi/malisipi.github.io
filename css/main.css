@@ -2,13 +2,16 @@
 
 body {
     margin: 0px;
-    background: #3E4937;
     scroll-behavior: smooth;
+    background: #CCCCCA;
+}
+
+body, a {
+    color: #270B0E;
 }
 
 * {
     font-family: 'Fira Sans', sans-serif;
-    color: #ffffff;
 }
 
 project-preview {
@@ -16,14 +19,15 @@ project-preview {
     height: 60vh;
     left: 5%;
     margin-bottom: 50px;
+    color: #FFFFFF;
 }
 
 project-preview:nth-child(2n+1) {
-    background: #4D8000;
+    background: #AF5443;
 }
 
 project-preview:nth-child(2n) {
-    background: #00828A;
+    background: #751E12;
 }
 
 social-media {
