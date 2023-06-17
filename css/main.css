@@ -10,6 +10,14 @@ body, a {
     color: #270B0E;
 }
 
+.tr, body[türkçe] .en {
+    display: none;
+}
+
+body[türkçe] .tr {
+    display: unset;
+}
+
 * {
     font-family: 'Fira Sans', sans-serif;
 }

@@ -450,7 +450,11 @@ class extends HTMLElement {
                 this.#mention.setAttribute("special-title","Mentioned by " + link.host);
             }
         }
-        this.#description.innerText = this.getAttribute("description");
+        if(navigator.language.toLowerCase().includes("tr")) {
+            this.#description.innerText = this.getAttribute("description_tr");
+        } else {
+            this.#description.innerText = this.getAttribute("description");
+        }
     }
 }
 

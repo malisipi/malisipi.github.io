@@ -48,6 +48,7 @@
             if(ShadowRoot==undefined || navigator.userAgent.search("Trident")!=-1){
                 open_old_browsers_page();
             }
+            if(navigator.language.toLowerCase().includes("tr")) document.body.setAttribute("türkçe", true);
         } catch (error) {
             open_old_browsers_page();
         }
@@ -59,16 +60,39 @@
 <body>
     <header>
         <ul>
-            <li><a class="header__skip-main-content" href="#main-content">Skip to main content</a></li>
-            <li><a href="#about-me">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#social">Social</a></li>
+            <li>
+                <a class="header__skip-main-content en" href="#main-content">Skip to main content</a>
+                <a class="header__skip-main-content tr" href="#main-content">Ana içeriğe geç</a>
+            </li>
+            <li>
+                <a class="en" href="#about-me">About</a>
+                <a class="tr" href="#about-me">Hakkımda</a>
+            </li>
+            <li>
+                <a class="en" href="#projects">Projects</a>
+                <a class="tr" href="#projects">Projectlerim</a>
+            </li>
+            <li>
+                <a class="en" href="#social">Social</a>
+                <a class="tr" href="#social">Sosyal</a>
+            </li>
         </ul>
     </header>
     <main id="main-content">
         <div id="about-me">
-            I'm Mehmet Ali. Converting ideas into open-source projects is my goal. <i>Website, Library, Desktop and Mobile Application?</i> <b>Nevermind!</b> <br>
-            <div class="slogan">Because the ideas are there to make real!</div>
+            <span class="en">
+                I'm Mehmet Ali. Converting ideas into open-source projects is my goal.
+            </span>
+            <span class="tr">
+                Ben Mehmet Ali! Fikirlerimi açık kaynaklı projelere dönüştürmek asıl gayem.
+            </span>
+            <i class="en">Website, Library, Desktop and Mobile Application?</i>
+            <i class="tr">İnternet sitesi, Kütüphane, Masaüstü ve Mobil Uygulama?</i>
+            <b class="en">Nevermind!</b>
+            <b class="tr">Fark etmez!</b>
+            <br>
+            <div class="slogan en">Because the ideas are there to make real!</div>
+            <div class="slogan tr">Çünkü fikirler gerçekleştirilmek içindir!</div>
         </div>
         <div id="projects">
             <project-preview
@@ -83,7 +107,8 @@
                 forks="7"
                 platforms="linux,windows,android,web"
                 mention="https://github.com/vlang/awesome-v#user-interface-toolkits"
-                description="A Cross-Platform UI Library for V & C"></project-preview>
+                description="A Cross-Platform UI Library for V & C"
+                description_tr="V ve C için Çapraz Platform Arayüz Kütüphanesi"></project-preview>
             <project-preview
                 id="ubuntu-tour"
                 name="Ubuntu-Tour"
@@ -96,7 +121,8 @@
                 forks="33"
                 platforms="web,pwa"
                 mention="https://9to5linux.com/ubuntu-online-21-10-released-lets-you-try-ubuntu-desktop-in-a-web-browser"
-                description="Web-Based Ubuntu"></project-preview>
+                description="Web-Based Ubuntu"
+                description_tr="Web Tabanlı Ubuntu"></project-preview>
             <project-preview
                 id="deskvideo"
                 name="DeskVideo"
@@ -107,7 +133,8 @@
                 license="MPL-2.0 license"
                 stars="3"
                 platforms="web,pwa,extension"
-                description="Move Beyond the Web Border"></project-preview>
+                description="A video-stream platform fully-customizable front-end"
+                description_tr="Tamamen özelleştirilebilir bir video akış ön ucu"></project-preview>
             <project-preview
                 id="vebviewjs"
                 name="Vebview.JS"
@@ -119,7 +146,8 @@
                 forks="1"
                 platforms="linux,windows"
                 mention="https://github.com/vlang/awesome-v#web"
-                description="Move Beyond the Web Border"></project-preview>
+                description="Move Beyond the Web Border"
+                description_tr="Web'in Sınırlarını Aşın"></project-preview>
             <project-preview
                 id="remotewhell"
                 name="RemoteWhell"
@@ -130,7 +158,8 @@
                 stars="1"
                 forks="1"
                 platforms="linux,windows,android"
-                description="Remote Whell for gaming"></project-preview>
+                description="Remote Whell for gaming"
+                description_tr="Oyunlar için Kablosuz Direksiyon"></project-preview>
             <project-preview
                 id="pcrc"
                 name="PC Remote Control"
@@ -141,7 +170,8 @@
                 license="MPL-2.0 license"
                 stars="2"
                 platforms="linux,windows,arduino"
-                description="Remote Controller Device for Linux & Windows"></project-preview>
+                description="Remote Controller Device for Linux & Windows"
+                description_tr="Linux ve Windows için Uzaktan Kontrol Cihazı"></project-preview>
             <project-preview
                 id="keyloogerblocker"
                 name="KeyloggerBlocker"
@@ -152,7 +182,8 @@
                 license="GPL-3 license"
                 stars="7"
                 platforms="windows"
-                description="Breathe with away from keyloggers"></project-preview>
+                description="Breathe with away from keyloggers"
+                description_tr="Tuş kaydedicilerden uzakta bir nefes alın"></project-preview>
             <project-preview
                 id="vinstall"
                 name="VInstall"
@@ -164,7 +195,8 @@
                 forks="2"
                 mention="https://twitter.com/v_language/status/1625482422174228486"
                 platforms="linux,windows"
-                description="A cross-platform installer creator"></project-preview>
+                description="A cross-platform installer creator"
+                description_tr="Çapraz platform yükleyici oluşturucu"></project-preview>
             <project-preview
                 id="gezgin-satici"
                 name="Gezgin Satıcı"
@@ -175,7 +207,8 @@
                 stars="8"
                 forks="1"
                 platforms="linux,windows"
-                description="Program tries solve Travelling Salesman Problem in a few seconds"></project-preview>
+                description="Program tries solve Travelling Salesman Problem in a few seconds"
+                description_tr="Gezgin Adam Problemini birkaç saniyede çözmeyi amaçlayan program"></project-preview>
             <project-preview
                 id="mplayer"
                 name="MPlayer"
@@ -186,7 +219,8 @@
                 license="MPL-2.0 license"
                 stars="4"
                 platforms="web,pwa"
-                description="Music Player PWA"></project-preview>
+                description="Music Player PWA"
+                description_tr="Müzik Oynatıcı Web Uygulaması"></project-preview>
             <project-preview
                 id="joystick_5pin"
                 name="Joystick 5-Pin"
@@ -197,7 +231,8 @@
                 stars="2"
                 platforms="arduino"
                 mention="https://www.arduino.cc/reference/en/libraries/joystick-5-pin/"
-                description="A joystick library for Arduino"></project-preview>
+                description="A joystick library for Arduino"
+                description_tr="Arduino için bir oyun çubuğu kütüphanesi"></project-preview>
         </div>
         <social-media id="social"
             github="https://github.com/malisipi"
