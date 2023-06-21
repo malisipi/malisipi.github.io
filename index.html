@@ -46,8 +46,9 @@
         //-->
         try {
             if(ShadowRoot==undefined || navigator.userAgent.search("Trident")!=-1){
-                open_old_browsers_page();
+                throw("Not Supported");
             }
+            (class extends HTMLElement {#a = null});
             if(navigator.language.toLowerCase().includes("tr")){
                 document.body.setAttribute("türkçe", true)
                 document.title = "malisipi'nin İnternet Sitesi"
