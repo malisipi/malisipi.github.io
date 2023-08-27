@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>The Red Wolf</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <meta name="available-variants" content="en,tr">
+    <style>
+        body[preload] book-page {
+            display: none;
+        }
+    </style>
+    <script src="./js/components/app-icon.js" defer></script>
+    <script src="./js/components/app-localization.js" defer></script>
+    <script src="./js/components/book-mark.js"></script>
+    <script src="./js/components/book-page.js" defer></script>
+    <script src="./js/components/img-viewer.js" defer></script>
+    <script src="./js/components/the-book.js"></script>
+    <script src="./js/components/wolf-claw.js" defer></script>
+    <script src="./js/index.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="malisipi's Website">
     <meta name="keywords" content="malisipi, profile, projects, github, open source">
     <meta name="author" content="malisipi">
-    <title>malisipi's Website</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta property="og:title" content="malisipi's Website">
     <meta property="og:site_name" content="malisipi">
@@ -24,239 +39,514 @@
     <meta property="profile:gender" content="male">
     <meta property="profile:username" content="malisipi">
     <div itemscope itemtype="https://schema.org/Person">
-      <meta itemprop="name" content="Mehmet Ali Şipi"/>
-      <meta itemprop="jobTitle" content="Developer"/>
-      <meta itemprop="email" content="mehmetalisipi@gmail.com"/>
-      <meta itemprop="url" content="https://malisipi.github.io/"/>
-      <meta itemprop="image" content="https://malisipi.github.io/favicon.png"/>
-      <meta itemprop="familyName" content="Şipi"/>
-      <meta itemprop="gender" content="male"/>
-      <meta itemprop="givenName" content="Mehmet"/>
-      <script type="application/ld+json">{"@context": "https://schema.org","@type": "Person","jobTitle": "Developer","email": "mailto:mehmetalisipi@gmail.com","url": "https://malisipi.github.io/","image": "https://malisipi.github.io/favicon.png","familyName": "Şipi","gender": "male","givenName": "Mehmet"}</script>
+        <meta itemprop="name" content="Mehmet Ali Şipi"/>
+        <meta itemprop="jobTitle" content="Developer"/>
+        <meta itemprop="email" content="mehmetalisipi@gmail.com"/>
+        <meta itemprop="url" content="https://malisipi.github.io/"/>
+        <meta itemprop="image" content="https://malisipi.github.io/favicon.png"/>
+        <meta itemprop="familyName" content="Şipi"/>
+        <meta itemprop="gender" content="male"/>
+        <meta itemprop="givenName" content="Mehmet Ali"/>
+        <script type="application/ld+json">{"@context": "https://schema.org","@type": "Person","jobTitle": "Developer","email": "mailto:mehmetalisipi@gmail.com","url": "https://malisipi.github.io/","image": "https://malisipi.github.io/favicon.png","familyName": "Şipi","gender": "male","givenName": "Mehmet Ali"}</script>
     </div>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/project-preview.js"></script>
-    <script src="js/social-media.js"></script>
-    <script type="text/javascript">
-        <!--
-            function open_old_browsers_page () {
-                location.href=location.protocol+"//"+location.host+"/old_browsers.html";
-            };
-            window.onerror = open_old_browsers_page;
-        //-->
-    </script>
-    <script type="text/javascript">
-            try {
-                if(ShadowRoot==undefined || navigator.userAgent.search("Trident")!=-1){
-                    throw("Not Supported");
-                }
-                (class extends HTMLElement {#a = null});
-                if(navigator.language.toLowerCase().includes("tr")){
-                    document.body.setAttribute("türkçe", true)
-                    document.title = "malisipi'nin İnternet Sitesi"
-                };
-            } catch (error) {
-                open_old_browsers_page();
-            }
-        //-->
-    </script>
-    <noscript>
-        <meta http-equiv="refresh" content="0;url=old_browsers.html">
-    </noscript>
 </head>
-<body>
-    <header>
-        <ul>
-            <li>
-                <a class="header__skip-main-content en" href="#main-content">Skip to main content</a>
-                <a class="header__skip-main-content tr" href="#main-content">Ana içeriğe geç</a>
-            </li>
-            <li>
-                <a class="en" href="#about-me">About</a>
-                <a class="tr" href="#about-me">Hakkımda</a>
-            </li>
-            <li>
-                <a class="en" href="#projects">Projects</a>
-                <a class="tr" href="#projects">Projelerim</a>
-            </li>
-            <li>
-                <a class="en" href="#social">Social</a>
-                <a class="tr" href="#social">Sosyal</a>
-            </li>
+<body dir="ltr">
+    <script>
+        document.body.setAttribute("preload", true);
+        document.addEventListener("DOMContentLoaded", function (){
+            document.body.removeAttribute("preload");
+        });
+    </script>
+    <book-mark>
+        <a tabindex="0" class="skip-to-content" href="#main-content">
+            <app-localization code="skip-to-content">Skip to content</app-localization>
+        </a>
+        <a tabindex="0" href="#about-me">
+            <app-localization code="about-me">About Me</app-localization>
+        </a>
+        <a tabindex="0" href="#my-softwares">
+            <app-localization code="my-softwares">My Softares</app-localization>
+        </a>
+        <a tabindex="0" href="#my-designs">
+            <app-localization code="my-designs">My Designs</app-localization>
+        </a>
+        <a tabindex="0" href="#contact">
+            <app-localization code="contact">Contact</app-localization>
+        </a>
+    </book-mark>
+    <the-book>
+        <h1 class="name" variant="en">Mehmet Ali's Porfolio</h1>
+        <h1 class="name" variant="tr">Mehmet Ali'nin Portfolyosu</h1>
+        <h2 class="description" variant="en">The Red Wolf</h2>
+        <h2 class="description" variant="tr">Kızıl Kurt</h2>
+    </the-book>
+
+    <book-page id="about-me">
+        <id-pointer id="main-content"></id-pointer>
+        <h1 class="title"><app-localization code="about-me">About Me</app-localization></h1>
+        <h2 class="description" variant="en" multiline>I'm the Turk who is 12th grader and raves to softwares. Designing and developing is my life goal.</h2>
+        <h2 class="description" variant="tr" multiline>12. sınıfa giden ve yazılımlara hayran olan bir Türk'üm. Tasarlamak ve tasarımı hayata geçirmek benim yaşama sevincim.</h2>
+    </book-page>
+
+    
+<book-page id="mui">
+    <id-pointer id="my-softwares"></id-pointer>
+    <h1 class="title" >MUI</h1>
+    <h2 class="description" variant="en">A Cross-Platform UI Library for V & C</h2><h2 class="description" variant="tr">V ve C için Çapraz Platform Arayüz Kütüphanesi</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/mui.webp" alt="Preview of MUI" aria-label="Preview of MUI" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/android">Android</app-icon></li><li><app-icon code="bootstrap/windows">Windows</app-icon></li><li><app-icon code="bootstrap/web">Web</app-icon></li><li><app-icon code="bootstrap/linux">Linux</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">Apache-2.0 License</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="79" button="3">79 Star</app-icon>
+        <a href="https://github.com/malisipi/mui" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <a href="https://github.com/vlang/awesome-v#user-interface-toolkits" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by vlang on github.com</app-icon>
+        </a>
+        <app-icon code="bootstrap/forks" pre-tip="8" button="6">8 Fork</app-icon>
+        <a href="https://malisipi.github.io/mui/" target="_blank" tabindex="-1" button="7">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </a>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="ubuntu-tour">
+    
+    <h1 class="title" variant="en">Ubuntu Tour</h1><h1 class="title" variant="tr">Ubuntu Tur</h1>
+    <h2 class="description" variant="en">Web-Based Ubuntu</h2><h2 class="description" variant="tr">Web İçin Ubuntu</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/ubuntu-tour.webp" alt="Preview of Ubuntu Tour" aria-label="Preview of Ubuntu Tour" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/web">Web</app-icon></li><li><app-icon code="unpacked/pwa">Progressive Web App</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">MPL-2.0 License</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="120" button="3">120 Star</app-icon>
+        <a href="https://github.com/malisipi/ubuntu-tour" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <a href="https://9to5linux.com/ubuntu-online-21-10-released-lets-you-try-ubuntu-desktop-in-a-web-browser" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by 9to5linux.com</app-icon>
+        </a>
+        <app-icon code="bootstrap/forks" pre-tip="36" button="6">36 Fork</app-icon>
+        <a href="https://malisipi.github.io/ubuntu-tour/" target="_blank" tabindex="-1" button="7">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </a>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="deskvideo">
+    
+    <h1 class="title" >DeskVideo</h1>
+    <h2 class="description" variant="en">A video-stream platform fully-customizable front-end</h2><h2 class="description" variant="tr">Tamamen özelleştirilebilir bir video akış ön ucu</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/deskvideo.webp" alt="Preview of DeskVideo" aria-label="Preview of DeskVideo" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/web">Web</app-icon></li><li><app-icon code="bootstrap/extension">Web Extension</app-icon></li><li><app-icon code="unpacked/pwa">Progressive Web App</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">MPL-2.0 License</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="4" button="3">4 Star</app-icon>
+        <a href="https://github.com/malisipi/DeskVideo" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <span hidden href="undefined" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by </app-icon>
+        </span>
+        <span hidden code="bootstrap/forks" pre-tip="0" button="6">0 Fork</span>
+        <a href="https://malisipi.github.io/DeskVideo/" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </a>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="vebviewjs">
+    
+    <h1 class="title" >Vebview.JS</h1>
+    <h2 class="description" variant="en">Move Beyond the Web Border</h2><h2 class="description" variant="tr">Web'in Sınırlarını Aşın</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/vebviewjs.webp" alt="Preview of Vebview.JS" aria-label="Preview of Vebview.JS" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/windows">Windows</app-icon></li><li><app-icon code="bootstrap/linux">Linux</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">Apache-2.0 License</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="55" button="3">55 Star</app-icon>
+        <a href="https://github.com/malisipi/Vebview.JS" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <a href="https://github.com/vlang/awesome-v#web" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by vlang on github.com</app-icon>
+        </a>
+        <app-icon code="bootstrap/forks" pre-tip="1" button="6">1 Fork</app-icon>
+        <span hidden href="null" target="_blank" tabindex="-1" button="7">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </span>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="remotewhell">
+    
+    <h1 class="title" >RemoteWhell</h1>
+    <h2 class="description" variant="en">Remote Whell for gaming</h2><h2 class="description" variant="tr">Oyunlar için Kablosuz Direksiyon</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/remotewhell.webp" alt="Preview of RemoteWhell" aria-label="Preview of RemoteWhell" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/android">Android</app-icon></li><li><app-icon code="bootstrap/windows">Windows</app-icon></li><li><app-icon code="bootstrap/linux">Linux</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">GPL-3.0 license</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="1" button="3">1 Star</app-icon>
+        <a href="https://github.com/Aboyoz/RemoteWheel" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <span hidden href="undefined" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by </app-icon>
+        </span>
+        <app-icon code="bootstrap/forks" pre-tip="1" button="5">1 Fork</app-icon>
+        <span hidden href="null" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </span>
+        <p class="owner" tabindex="0" tip="Project Owner">Aboyoz</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="pcrc">
+    
+    <h1 class="title" >PC Remote Control</h1>
+    <h2 class="description" variant="en">Remote Controller Device for Linux & Windows & Web</h2><h2 class="description" variant="tr">Linux, Windows ve Web için Uzaktan Kontrol Cihazı</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/pcrc.webp" alt="Preview of PC Remote Control" aria-label="Preview of PC Remote Control" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/windows">Windows</app-icon></li><li><app-icon code="bootstrap/web">Web</app-icon></li><li><app-icon code="bootstrap/arduino">Arduino</app-icon></li><li><app-icon code="bootstrap/linux">Linux</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">MPL-2.0 License</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="2" button="3">2 Star</app-icon>
+        <a href="https://github.com/malisipi/PC_Remote_Control" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <span hidden href="undefined" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by </app-icon>
+        </span>
+        <span hidden code="bootstrap/forks" pre-tip="0" button="6">0 Fork</span>
+        <a href="https://youtu.be/ASs5eGhHqLA" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </a>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="keyloggerblocker">
+    
+    <h1 class="title" >KeyloggerBlocker</h1>
+    <h2 class="description" variant="en">Breathe with away from keyloggers</h2><h2 class="description" variant="tr">Tuş kaydedicilerden uzakta bir nefes alın</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/keylogger-blocker.webp" alt="Preview of KeyloggerBlocker" aria-label="Preview of KeyloggerBlocker" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/windows">Windows</app-icon></li><li><app-icon code="bootstrap/linux">Linux</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">GPL-3 license</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="7" button="3">7 Star</app-icon>
+        <a href="https://github.com/malisipi/KeyloggerBlocker" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <span hidden href="undefined" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by </app-icon>
+        </span>
+        <span hidden code="bootstrap/forks" pre-tip="0" button="6">0 Fork</span>
+        <a href="https://malisipi.github.io/KeyloggerBlocker/" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </a>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="vinstall">
+    
+    <h1 class="title" >VInstall</h1>
+    <h2 class="description" variant="en">A cross-platform installer creator</h2><h2 class="description" variant="tr">Çapraz platform yükleyici oluşturucu</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/vinstall.webp" alt="Preview of VInstall" aria-label="Preview of VInstall" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/windows">Windows</app-icon></li><li><app-icon code="bootstrap/linux">Linux</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">Apache-2.0 License</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="32" button="3">32 Star</app-icon>
+        <a href="https://github.com/malisipi/VInstall" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <a href="https://x.com/v_language/status/1625482422174228486" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by v_language on x.com</app-icon>
+        </a>
+        <app-icon code="bootstrap/forks" pre-tip="2" button="6">2 Fork</app-icon>
+        <span hidden href="null" target="_blank" tabindex="-1" button="7">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </span>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="wingbeat">
+    
+    <h1 class="title" >WingBeat</h1>
+    <h2 class="description" variant="en">Twitter enhancer chrome extension</h2><h2 class="description" variant="tr">Twitter güçlendirici chrome uzantısı</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/wingbeat.webp" alt="Preview of WingBeat" aria-label="Preview of WingBeat" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/extension">Web Extension</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">Apache-2.0 License</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="2" button="3">2 Star</app-icon>
+        <a href="https://github.com/malisipi/wingbeat" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <span hidden href="undefined" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by </app-icon>
+        </span>
+        <span hidden code="bootstrap/forks" pre-tip="0" button="5">0 Fork</span>
+        <span hidden href="null" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </span>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="gezgin-satici">
+    
+    <h1 class="title" variant="en">Travelling Salesman</h1><h1 class="title" variant="tr">Gezgin Satıcı</h1>
+    <h2 class="description" variant="en">Program tries solve Travelling Salesman Problem in a few seconds</h2><h2 class="description" variant="tr">Gezgin Satıcı Problemini birkaç saniyede çözmeyi amaçlayan program</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/gezgin-satici.webp" alt="Preview of Travelling Salesman" aria-label="Preview of Travelling Salesman" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/windows">Windows</app-icon></li><li><app-icon code="bootstrap/linux">Linux</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">MPL-2.0 License</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="8" button="3">8 Star</app-icon>
+        <a href="https://github.com/malisipi/gezgin-satici" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <span hidden href="undefined" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by </app-icon>
+        </span>
+        <app-icon code="bootstrap/forks" pre-tip="1" button="5">1 Fork</app-icon>
+        <span hidden href="null" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </span>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="mplayer">
+    
+    <h1 class="title" >MPlayer</h1>
+    <h2 class="description" variant="en">Music Player PWA</h2><h2 class="description" variant="tr">Müzik Oynatıcı Web Uygulaması</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/mplayer.webp" alt="Preview of MPlayer" aria-label="Preview of MPlayer" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/web">Web</app-icon></li><li><app-icon code="unpacked/pwa">Progressive Web App</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">MPL-2.0 License</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="4" button="3">4 Star</app-icon>
+        <a href="https://github.com/malisipi/MPlayer" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <span hidden href="undefined" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by </app-icon>
+        </span>
+        <span hidden code="bootstrap/forks" pre-tip="0" button="6">0 Fork</span>
+        <a href="https://malisipi.github.io/MPlayer/" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </a>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="joystick_5pin">
+    
+    <h1 class="title" >Joystick 5 Pin</h1>
+    <h2 class="description" variant="en">A joystick library for Arduino</h2><h2 class="description" variant="tr">Arduino için bir oyun çubuğu kütüphanesi</h2>
+    <img-viewer class="preview">
+        <img src="assets/covers/softwares/joystick5pin.webp" alt="Preview of Joystick 5 Pin" aria-label="Preview of Joystick 5 Pin" draggable="false"/>
+    </img-viewer>
+    <wolf-claw>
+        <app-icon code="bootstrap/platforms" tip="{html}" inject button="1" tabindex="0" notabindex>
+            <ul class="tip platforms">
+                <li><app-icon code="bootstrap/arduino">Arduino</app-icon></li>
+            </ul>
+        </app-icon>
+        <app-icon code="bootstrap/license" button="2">MIT License</app-icon>
+        <app-icon code="bootstrap/stars" pre-tip="2" button="3">2 Star</app-icon>
+        <a href="https://github.com/malisipi/joystick_5pin" target="_blank" tabindex="-1" button="4">
+            <app-icon code="bootstrap/source">Github</app-icon>
+        </a>
+        <a href="https://www.arduino.cc/reference/en/libraries/joystick-5-pin/" target="_blank" tabindex="-1" button="5">
+            <app-icon code="bootstrap/mention">Mentioned by www.arduino.cc</app-icon>
+        </a>
+        <span hidden code="bootstrap/forks" pre-tip="0" button="6">0 Fork</span>
+        <span hidden href="null" target="_blank" tabindex="-1" button="7">
+            <app-icon code="bootstrap/demo">Open Demo</app-icon>
+        </span>
+        <p class="owner" tabindex="0" tip="Project Owner">malisipi</p>
+    </wolf-claw>
+</book-page>
+
+<book-page id="3d-home-furnitures">
+<id-pointer id="my-designs"></id-pointer>
+<h1 class="title" variant="en">3D Home Furnitures</h1><h1 class="title" variant="tr">3B Ev Eşyaları</h1>
+<h2 class="description" variant="en">A few home furnitures</h2><h2 class="description" variant="tr">Birkaç Ev Eşyası</h2>
+<img-viewer class="preview">
+    <img src="assets/covers/designs/3d-home-furnitures.webp" alt="Preview of 3D Home Furnitures" aria-label="Preview of 3D Home Furnitures" draggable="false"/>
+</img-viewer>
+<wolf-claw>
+    <app-icon code="bootstrap/tools" tip="{html}" inject button="1" tabindex="0" notabindex>
+        <ul class="tip tools">
+            <li><app-icon code="simple-icons/blender">Blender</app-icon></li>
         </ul>
-    </header>
-    <main id="main-content">
-        <div id="about-me">
-            <span class="en">
-                I'm Mehmet Ali. Converting ideas into open-source projects is my goal.
-            </span>
-            <span class="tr">
-                Ben Mehmet Ali! Fikirlerimi açık kaynaklı projelere dönüştürmek asıl gayem.
-            </span>
-            <i class="en">Website, Library, Desktop and Mobile Application?</i>
-            <i class="tr">İnternet sitesi, Kütüphane, Masaüstü ve Mobil Uygulama?</i>
-            <b class="en">Nevermind!</b>
-            <b class="tr">Fark etmez!</b>
-            <br>
-            <div class="slogan en">Because the ideas are there to make real!</div>
-            <div class="slogan tr">Çünkü fikirler gerçekleştirilmek içindir!</div>
+    </app-icon>
+    <app-icon code="bootstrap/likes" pre-tip="2" button="2">2 Like</app-icon>
+    <a href="https://www.behance.net/gallery/177722899/3D-Home-Furnitures" target="_blank" tabindex="-1" button="3">
+        <app-icon code="bootstrap/source">Behance</app-icon>
+    </a>
+    <span hidden href="null" target="_blank" tabindex="-1" button="4">
+        <app-icon code="bootstrap/demo">Open Preview</app-icon>
+    </span>
+    <p class="owner" tabindex="0" tip="Design Owner">malisipi</p>
+</wolf-claw>
+</book-page>
+
+<book-page id="poly-animals">
+
+<h1 class="title" variant="en">Poly Animals</h1><h1 class="title" variant="tr">Poli Hayvanlar</h1>
+<h2 class="description" variant="en">Animals similar to 3D Low-Poly</h2><h2 class="description" variant="tr">3B Düşük Poli benzeri Hayvanlar</h2>
+<img-viewer class="preview">
+    <img src="assets/covers/designs/poly-animals.webp" alt="Preview of Poly Animals" aria-label="Preview of Poly Animals" draggable="false"/>
+</img-viewer>
+<wolf-claw>
+    <app-icon code="bootstrap/tools" tip="{html}" inject button="1" tabindex="0" notabindex>
+        <ul class="tip tools">
+            <li><app-icon code="simple-icons/illustrator">Adobe Illustrator</app-icon></li>
+        </ul>
+    </app-icon>
+    <app-icon code="bootstrap/likes" pre-tip="2" button="2">2 Like</app-icon>
+    <a href="https://www.behance.net/gallery/173906677/Poly-Animals" target="_blank" tabindex="-1" button="3">
+        <app-icon code="bootstrap/source">Behance</app-icon>
+    </a>
+    <span hidden href="null" target="_blank" tabindex="-1" button="4">
+        <app-icon code="bootstrap/demo">Open Preview</app-icon>
+    </span>
+    <p class="owner" tabindex="0" tip="Design Owner">malisipi</p>
+</wolf-claw>
+</book-page>
+
+<book-page id="restoring-old-graffiti">
+
+<h1 class="title" variant="en">Restoring Old Graffiti</h1><h1 class="title" variant="tr">Eski Grafitinin Onarılması</h1>
+<h2 class="description" variant="en">Restoring Old Graffiti in My School</h2><h2 class="description" variant="tr">Okulumdaki Eski Grafitinin Onarımı</h2>
+<img-viewer class="preview">
+    <img src="assets/covers/designs/restoring-old-graffiti.webp" alt="Preview of Restoring Old Graffiti" aria-label="Preview of Restoring Old Graffiti" draggable="false"/>
+</img-viewer>
+<wolf-claw>
+    <app-icon code="bootstrap/tools" tip="{html}" inject button="1" tabindex="0" notabindex>
+        <ul class="tip tools">
+            <li><app-icon code="simple-icons/illustrator">Adobe Illustrator</app-icon></li>
+        </ul>
+    </app-icon>
+    <app-icon code="bootstrap/likes" pre-tip="2" button="2">2 Like</app-icon>
+    <a href="https://www.behance.net/gallery/161972177/Restoring-Old-Graffiti" target="_blank" tabindex="-1" button="3">
+        <app-icon code="bootstrap/source">Behance</app-icon>
+    </a>
+    <span hidden href="null" target="_blank" tabindex="-1" button="4">
+        <app-icon code="bootstrap/demo">Open Preview</app-icon>
+    </span>
+    <p class="owner" tabindex="0" tip="Design Owner">malisipi</p>
+</wolf-claw>
+</book-page>
+
+<book-page id="wolf-line-art">
+
+<h1 class="title" >Wolf Line Art</h1>
+
+<img-viewer class="preview">
+    <img src="assets/covers/designs/wolf-line-art.webp" alt="Preview of Wolf Line Art" aria-label="Preview of Wolf Line Art" draggable="false"/>
+</img-viewer>
+<wolf-claw>
+    <app-icon code="bootstrap/tools" tip="{html}" inject button="1" tabindex="0" notabindex>
+        <ul class="tip tools">
+            <li><app-icon code="simple-icons/illustrator">Adobe Illustrator</app-icon></li>
+        </ul>
+    </app-icon>
+    <app-icon code="bootstrap/likes" pre-tip="1" button="2">1 Like</app-icon>
+    <a href="https://www.behance.net/gallery/156974245/Wolf-Line-Art" target="_blank" tabindex="-1" button="3">
+        <app-icon code="bootstrap/source">Behance</app-icon>
+    </a>
+    <span hidden href="null" target="_blank" tabindex="-1" button="4">
+        <app-icon code="bootstrap/demo">Open Preview</app-icon>
+    </span>
+    <p class="owner" tabindex="0" tip="Design Owner">malisipi</p>
+</wolf-claw>
+</book-page>
+
+
+    <book-page id="contact">
+        <h1 class="title" variant="en">And last one,</h1>
+        <h1 class="title" variant="tr">Ve son olarak,</h1>
+        <h2 class="description" variant="en" multiline>You can contact me over those social networks and follow me :D</h2>
+        <h2 class="description" variant="tr" multiline>Aşağıdaki sosyal medya hesaplarım üzerinde benimle iletişime geçebilir veya beni takip edebilirsiniz :D</h2>
+        <div class="details">
+            <a target="_blank" href="https://github.com/malisipi"><app-icon code="bootstrap/github">GitHub</app-icon></a>
+            <a target="_blank" href="https://www.behance.net/malisipi"><app-icon code="bootstrap/behance">Behance</app-icon></a>
+            <a target="_blank" href="https://twitter.com/malisipi"><app-icon code="bootstrap/twitter">Twitter</app-icon></a>
+            <a target="_blank" href="https://www.threads.net/@mehmetalisipi"><app-icon code="bootstrap/threads">Threads</app-icon></a>
+            <a target="_blank" href="mailto:mehmetalisipi@gmail.com"><app-icon code="bootstrap/mail">E-Mail</app-icon></a>
         </div>
-        <div id="projects">
-            <project-preview
-                id="mui"
-                name="MUI"
-                owner="malisipi"
-                source="https://github.com/malisipi/mui"
-                cover="covers/mui.webp"
-                demo="https://malisipi.github.io/mui/"
-                license="Apache-2.0 License"
-                stars="75"
-                forks="8"
-                platforms="linux,windows,android,web"
-                mention="https://github.com/vlang/awesome-v#user-interface-toolkits"
-                description="A Cross-Platform UI Library for V & C"
-                description_tr="V ve C için Çapraz Platform Arayüz Kütüphanesi"></project-preview>
-            <project-preview
-                id="ubuntu-tour"
-                name="Ubuntu-Tour"
-                owner="malisipi"
-                source="https://github.com/malisipi/ubuntu-tour"
-                cover="covers/ubuntu-tour.webp"
-                demo="https://malisipi.github.io/ubuntu-tour/"
-                license="MPL-2.0 License"
-                stars="119"
-                forks="35"
-                platforms="web,pwa"
-                mention="https://9to5linux.com/ubuntu-online-21-10-released-lets-you-try-ubuntu-desktop-in-a-web-browser"
-                description="Web-Based Ubuntu"
-                description_tr="Web Tabanlı Ubuntu"></project-preview>
-            <project-preview
-                id="deskvideo"
-                name="DeskVideo"
-                owner="malisipi"
-                source="https://github.com/malisipi/DeskVideo"
-                cover="covers/deskvideo.webp"
-                demo="https://malisipi.github.io/DeskVideo/"
-                license="MPL-2.0 license"
-                stars="4"
-                platforms="web,pwa,extension"
-                description="A video-stream platform fully-customizable front-end"
-                description_tr="Tamamen özelleştirilebilir bir video akış ön ucu"></project-preview>
-            <project-preview
-                id="vebviewjs"
-                name="Vebview.JS"
-                owner="malisipi"
-                source="https://github.com/malisipi/Vebview.JS"
-                cover="covers/vebviewjs.webp"
-                license="Apache-2.0 license"
-                stars="54"
-                forks="1"
-                platforms="linux,windows"
-                mention="https://github.com/vlang/awesome-v#web"
-                description="Move Beyond the Web Border"
-                description_tr="Web'in Sınırlarını Aşın"></project-preview>
-            <project-preview
-                id="remotewhell"
-                name="RemoteWhell"
-                owner="Aboyoz"
-                source="https://github.com/Aboyoz/RemoteWheel"
-                cover="covers/remotewhell.webp"
-                license="GPL-3.0 license"
-                stars="1"
-                forks="1"
-                platforms="linux,windows,android"
-                description="Remote Whell for gaming"
-                description_tr="Oyunlar için Kablosuz Direksiyon"></project-preview>
-            <project-preview
-                id="pcrc"
-                name="PC Remote Control"
-                owner="malisipi"
-                source="https://github.com/malisipi/PC_Remote_Control"
-                cover="covers/pcrc.webp"
-                demo="https://youtu.be/ASs5eGhHqLA"
-                license="MPL-2.0 license"
-                stars="2"
-                platforms="linux,windows,arduino,web"
-                description="Remote Controller Device for Linux & Windows & Web"
-                description_tr="Linux, Windows ve Web için Uzaktan Kontrol Cihazı"></project-preview>
-            <project-preview
-                id="keyloggerblocker"
-                name="KeyloggerBlocker"
-                owner="malisipi"
-                source="https://github.com/malisipi/KeyloggerBlocker"
-                cover="covers/keylogger-blocker.webp"
-                demo="https://malisipi.github.io/KeyloggerBlocker/"
-                license="GPL-3 license"
-                stars="7"
-                platforms="windows"
-                description="Breathe with away from keyloggers"
-                description_tr="Tuş kaydedicilerden uzakta bir nefes alın"></project-preview>
-            <project-preview
-                id="vinstall"
-                name="VInstall"
-                owner="malisipi"
-                source="https://github.com/malisipi/VInstall"
-                cover="covers/vinstall.webp"
-                license="Apache-2.0 license"
-                stars="32"
-                forks="2"
-                mention="https://twitter.com/v_language/status/1625482422174228486"
-                platforms="linux,windows"
-                description="A cross-platform installer creator"
-                description_tr="Çapraz platform yükleyici oluşturucu"></project-preview>
-            <project-preview
-                id="wingbeat"
-                name="WingBeat"
-                owner="malisipi"
-                source="https://github.com/malisipi/wingbeat"
-                cover="covers/wingbeat.webp"
-                license="Apache-2.0 license"
-                stars="2"
-                platforms="extension"
-                description="Twitter enhancer chrome extension"
-                description_tr="Twitter güçlendirici chrome uzantısı"></project-preview>
-            <project-preview
-                id="gezgin-satici"
-                name="Gezgin Satıcı"
-                owner="malisipi"
-                source="https://github.com/malisipi/gezgin-satici"
-                cover="covers/gezgin-satici.webp"
-                license="MPL-2.0 license"
-                stars="8"
-                forks="1"
-                platforms="linux,windows"
-                description="Program tries solve Travelling Salesman Problem in a few seconds"
-                description_tr="Gezgin Satıcı Problemini birkaç saniyede çözmeyi amaçlayan program"></project-preview>
-            <project-preview
-                id="mplayer"
-                name="MPlayer"
-                owner="malisipi"
-                source="https://github.com/malisipi/MPlayer"
-                cover="covers/mplayer.webp"
-                demo="https://malisipi.github.io/MPlayer/"
-                license="MPL-2.0 license"
-                stars="4"
-                platforms="web,pwa"
-                description="Music Player PWA"
-                description_tr="Müzik Oynatıcı Web Uygulaması"></project-preview>
-            <project-preview
-                id="joystick_5pin"
-                name="Joystick 5-Pin"
-                owner="malisipi"
-                source="https://github.com/malisipi/joystick_5pin"
-                cover="covers/joystick5pin.webp"
-                license="MIT license"
-                stars="2"
-                platforms="arduino"
-                mention="https://www.arduino.cc/reference/en/libraries/joystick-5-pin/"
-                description="A joystick library for Arduino"
-                description_tr="Arduino için bir oyun çubuğu kütüphanesi"></project-preview>
-        </div>
-        <social-media id="social"
-            github="https://github.com/malisipi"
-            mail="mailto:mehmetalisipi@gmail.com"></social-media>
-    </main>
-    <footer></footer>
+    </book-page>
+
 </body>
 </html>

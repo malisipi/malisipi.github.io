@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>The Red Wolf</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <meta name="available-variants" content="en,tr">
+    <style>
+        body[preload] book-page {
+            display: none;
+        }
+    </style>
+    <script src="./js/components/app-icon.js" defer></script>
+    <script src="./js/components/app-localization.js" defer></script>
+    <script src="./js/components/book-mark.js"></script>
+    <script src="./js/components/book-page.js" defer></script>
+    <script src="./js/components/img-viewer.js" defer></script>
+    <script src="./js/components/the-book.js"></script>
+    <script src="./js/components/wolf-claw.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="malisipi's Website">
+    <meta name="keywords" content="malisipi, profile, projects, github, open source">
+    <meta name="author" content="malisipi">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta property="og:title" content="malisipi's Website">
+    <meta property="og:site_name" content="malisipi">
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="profile" />
+    <!-- <meta property="og:url" content="full link this page" /> -->
+    <!-- <meta property="og:image" content="full link of page cover" /> -->
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:type" content="image/png">
+    <meta property="profile:first_name" content="Mehmet Ali">
+    <meta property="profile:last_name" content="Şipi">
+    <meta property="profile:gender" content="male">
+    <meta property="profile:username" content="malisipi">
+    <div itemscope itemtype="https://schema.org/Person">
+        <meta itemprop="name" content="Mehmet Ali Şipi"/>
+        <meta itemprop="jobTitle" content="Developer"/>
+        <meta itemprop="email" content="mehmetalisipi@gmail.com"/>
+        <meta itemprop="url" content="https://malisipi.github.io/"/>
+        <meta itemprop="image" content="https://malisipi.github.io/favicon.png"/>
+        <meta itemprop="familyName" content="Şipi"/>
+        <meta itemprop="gender" content="male"/>
+        <meta itemprop="givenName" content="Mehmet Ali"/>
+        <script type="application/ld+json">{"@context": "https://schema.org","@type": "Person","jobTitle": "Developer","email": "mailto:mehmetalisipi@gmail.com","url": "https://malisipi.github.io/","image": "https://malisipi.github.io/favicon.png","familyName": "Şipi","gender": "male","givenName": "Mehmet Ali"}</script>
+    </div>
+</head>
+<body dir="ltr">
+    <script>
+        document.body.setAttribute("preload", true);
+        document.addEventListener("DOMContentLoaded", function (){
+            document.body.removeAttribute("preload");
+        });
+    </script>
+    <book-mark>
+        <a tabindex="0" class="skip-to-content" href="#main-content">
+            <app-localization code="skip-to-content">Skip to content</app-localization>
+        </a>
+        <a tabindex="0" href="#about-me">
+            <app-localization code="about-me">About Me</app-localization>
+        </a>
+        <a tabindex="0" href="#my-softwares">
+            <app-localization code="my-softwares">My Softares</app-localization>
+        </a>
+        <a tabindex="0" href="#my-designs">
+            <app-localization code="my-designs">My Designs</app-localization>
+        </a>
+        <a tabindex="0" href="#contact">
+            <app-localization code="contact">Contact</app-localization>
+        </a>
+    </book-mark>
+    <the-book>
+        <h1 class="name" variant="en">Mehmet Ali's Porfolio</h1>
+        <h1 class="name" variant="tr">Mehmet Ali'nin Portfolyosu</h1>
+        <h2 class="description" variant="en">The Red Wolf</h2>
+        <h2 class="description" variant="tr">Kızıl Kurt</h2>
+    </the-book>
+
+    <book-page id="about-me">
+        <id-pointer id="main-content"></id-pointer>
+        <h1 class="title"><app-localization code="about-me">About Me</app-localization></h1>
+        <h2 class="description" variant="en" multiline>I'm the Turk who is 12th grader and raves to softwares. Designing and developing is my life goal.</h2>
+        <h2 class="description" variant="tr" multiline>12. sınıfa giden ve yazılımlara hayran olan bir Türk'üm. Tasarlamak ve tasarımı hayata geçirmek benim yaşama sevincim.</h2>
+    </book-page>
+
+    <$render type="projects">projects.json</$render>
+
+    <book-page id="contact">
+        <h1 class="title" variant="en">And last one,</h1>
+        <h1 class="title" variant="tr">Ve son olarak,</h1>
+        <h2 class="description" variant="en" multiline>You can contact me over those social networks and follow me :D</h2>
+        <h2 class="description" variant="tr" multiline>Aşağıdaki sosyal medya hesaplarım üzerinde benimle iletişime geçebilir veya beni takip edebilirsiniz :D</h2>
+        <div class="details">
+            <a target="_blank" href="https://github.com/malisipi"><app-icon code="bootstrap/github">GitHub</app-icon></a>
+            <a target="_blank" href="https://www.behance.net/malisipi"><app-icon code="bootstrap/behance">Behance</app-icon></a>
+            <a target="_blank" href="https://twitter.com/malisipi"><app-icon code="bootstrap/twitter">Twitter</app-icon></a>
+            <a target="_blank" href="https://www.threads.net/@mehmetalisipi"><app-icon code="bootstrap/threads">Threads</app-icon></a>
+            <a target="_blank" href="mailto:mehmetalisipi@gmail.com"><app-icon code="bootstrap/mail">E-Mail</app-icon></a>
+        </div>
+    </book-page>
+
+</body>
+</html>
