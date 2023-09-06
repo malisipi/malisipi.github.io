@@ -1,0 +1,328 @@
+[
+    {
+        "type": "pointer",
+        "pointer": "my-softwares"
+    },
+    {
+        "type": "software",
+        "id": "mui",
+        "name": {
+            "#": "MUI"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/mui",
+        "cover": "mui.webp",
+        "demo": "https://malisipi.github.io/mui/",
+        "license": "Apache-2.0 License",
+        "stars": 79,
+        "forks": 8,
+        "platforms": ["linux", "windows", "android", "web"],
+        "mentions": ["https://github.com/vlang/awesome-v#user-interface-toolkits"],
+        "description": {
+            "#": "A Cross-Platform UI Library for V & C",
+            "#tr": "V ve C için Çapraz Platform Arayüz Kütüphanesi"
+        }
+    },
+    {
+        "type": "software",
+        "id": "ubuntu-tour",
+        "name": {
+            "#": "Ubuntu Tour",
+            "#tr": "Ubuntu Tur"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/ubuntu-tour",
+        "cover": "ubuntu-tour.webp",
+        "demo": "https://malisipi.github.io/ubuntu-tour/",
+        "license": "MPL-2.0 License",
+        "stars": 120,
+        "forks": 36,
+        "platforms": ["web", "pwa"],
+        "mentions": ["https://9to5linux.com/ubuntu-online-21-10-released-lets-you-try-ubuntu-desktop-in-a-web-browser"],
+        "description": {
+            "#": "Web-Based Ubuntu",
+            "#tr": "Web İçin Ubuntu"
+        }
+    },
+    {
+        "type": "software",
+        "id": "deskvideo",
+        "name": {
+            "#": "DeskVideo"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/DeskVideo",
+        "cover": "deskvideo.webp",
+        "demo": "https://malisipi.github.io/DeskVideo/",
+        "license": "MPL-2.0 License",
+        "stars": 4,
+        "forks": 0,
+        "platforms": ["web", "pwa", "extension"],
+        "mentions": [],
+        "description": {
+            "#": "A video-stream platform fully-customizable front-end",
+            "#tr": "Tamamen özelleştirilebilir bir video akış ön ucu"
+        }
+    },
+    {
+        "type": "software",
+        "id": "vebviewjs",
+        "name": {
+            "#": "Vebview.JS"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/Vebview.JS",
+        "cover": "vebviewjs.webp",
+        "demo": null,
+        "license": "Apache-2.0 License",
+        "stars": 55,
+        "forks": 1,
+        "platforms": ["linux", "windows"],
+        "mentions": ["https://github.com/vlang/awesome-v#web"],
+        "description": {
+            "#": "Move Beyond the Web Border",
+            "#tr": "Web'in Sınırlarını Aşın"
+        }
+    },
+    {
+        "type": "software",
+        "id": "remotewhell",
+        "name": {
+            "#": "RemoteWhell"
+        },
+        "owner": "Aboyoz",
+        "source": "https://github.com/Aboyoz/RemoteWheel",
+        "cover": "remotewhell.webp",
+        "demo": null,
+        "license": "GPL-3.0 license",
+        "stars": 1,
+        "forks": 1,
+        "platforms": ["linux", "windows", "android"],
+        "mentions": [],
+        "description": {
+            "#": "Remote Whell for gaming",
+            "#tr": "Oyunlar için Kablosuz Direksiyon"
+        }
+    },
+    {
+        "type": "software",
+        "id": "pcrc",
+        "name": {
+            "#": "PC Remote Control"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/PC_Remote_Control",
+        "cover": "pcrc.webp",
+        "demo": "https://youtu.be/ASs5eGhHqLA",
+        "license": "MPL-2.0 License",
+        "stars": 2,
+        "forks": 0,
+        "platforms": ["linux", "windows", "arduino", "web"],
+        "mentions": [],
+        "description": {
+            "#": "Remote Controller Device for Linux & Windows & Web",
+            "#tr": "Linux, Windows ve Web için Uzaktan Kontrol Cihazı"
+        }
+    },
+    {
+        "type": "software",
+        "id": "keyloggerblocker",
+        "name": {
+            "#": "KeyloggerBlocker"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/KeyloggerBlocker",
+        "cover": "keylogger-blocker.webp",
+        "demo": "https://malisipi.github.io/KeyloggerBlocker/",
+        "license": "GPL-3 license",
+        "stars": 7,
+        "forks": 0,
+        "platforms": ["linux", "windows"],
+        "mentions": [],
+        "description": {
+            "#": "Breathe with away from keyloggers",
+            "#tr": "Tuş kaydedicilerden uzakta bir nefes alın"
+        }
+    },
+    {
+        "type": "software",
+        "id": "vinstall",
+        "name": {
+            "#": "VInstall"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/VInstall",
+        "cover": "vinstall.webp",
+        "demo": null,
+        "license": "Apache-2.0 License",
+        "stars": 32,
+        "forks": 2,
+        "platforms": ["linux", "windows"],
+        "mentions": ["https://x.com/v_language/status/1625482422174228486"],
+        "description": {
+            "#": "A cross-platform installer creator",
+            "#tr": "Çapraz platform yükleyici oluşturucu"
+        }
+    },
+    {
+        "type": "software",
+        "id": "wingbeat",
+        "name": {
+            "#": "WingBeat"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/wingbeat",
+        "cover": "wingbeat.webp",
+        "demo": null,
+        "license": "Apache-2.0 License",
+        "stars": 2,
+        "forks": 0,
+        "platforms": ["extension"],
+        "mentions": [],
+        "description": {
+            "#": "Twitter enhancer chrome extension",
+            "#tr": "Twitter güçlendirici chrome uzantısı"
+        }
+    },
+    {
+        "type": "software",
+        "id": "gezgin-satici",
+        "name": {
+            "#": "Travelling Salesman",
+            "#tr": "Gezgin Satıcı"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/gezgin-satici",
+        "cover": "gezgin-satici.webp",
+        "demo": null,
+        "license": "MPL-2.0 License",
+        "stars": 8,
+        "forks": 1,
+        "platforms": ["linux", "windows"],
+        "mentions": [],
+        "description": {
+            "#": "Program tries solve Travelling Salesman Problem in a few seconds",
+            "#tr": "Gezgin Satıcı Problemini birkaç saniyede çözmeyi amaçlayan program"
+        }
+    },
+    {
+        "type": "software",
+        "id": "mplayer",
+        "name": {
+            "#": "MPlayer"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/MPlayer",
+        "cover": "mplayer.webp",
+        "demo": "https://malisipi.github.io/MPlayer/",
+        "license": "MPL-2.0 License",
+        "stars": 4,
+        "forks": 0,
+        "platforms": ["web", "pwa"],
+        "mentions": [],
+        "description": {
+            "#": "Music Player PWA",
+            "#tr": "Müzik Oynatıcı Web Uygulaması"
+        }
+    },
+    {
+        "type": "software",
+        "id": "joystick_5pin",
+        "name": {
+            "#": "Joystick 5 Pin"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/joystick_5pin",
+        "cover": "joystick5pin.webp",
+        "demo": null,
+        "license": "MIT License",
+        "stars": 2,
+        "forks": 0,
+        "platforms": ["arduino"],
+        "mentions": ["https://www.arduino.cc/reference/en/libraries/joystick-5-pin/"],
+        "description": {
+            "#": "A joystick library for Arduino",
+            "#tr": "Arduino için bir oyun çubuğu kütüphanesi"
+        }
+    },
+    {
+        "type": "pointer",
+        "pointer": "my-designs"
+    },
+    {
+        "type": "design",
+        "id": "3d-home-furnitures",
+        "name": {
+            "#": "3D Home Furnitures",
+            "#tr": "3B Ev Eşyaları"
+        },
+        "owner": "malisipi",
+        "source_host": "Behance",
+        "source": "https://www.behance.net/gallery/177722899/3D-Home-Furnitures",
+        "cover": "3d-home-furnitures.webp",
+        "demo": null,
+        "likes": 2,
+        "mentions": [],
+        "tools": ["blender"],
+        "description": {
+            "#": "A few home furnitures",
+            "#tr": "Birkaç Ev Eşyası"
+        }
+    },
+    {
+        "type": "design",
+        "id": "poly-animals",
+        "name": {
+            "#": "Poly Animals",
+            "#tr": "Poli Hayvanlar"
+        },
+        "owner": "malisipi",
+        "source_host": "Behance",
+        "source": "https://www.behance.net/gallery/173906677/Poly-Animals",
+        "cover": "poly-animals.webp",
+        "demo": null,
+        "likes": 2,
+        "mentions": [],
+        "tools": ["illustrator"],
+        "description": {
+            "#": "Animals similar to 3D Low-Poly",
+            "#tr": "3B Düşük Poli benzeri Hayvanlar"
+        }
+    },
+    {
+        "type": "design",
+        "id": "restoring-old-graffiti",
+        "name": {
+            "#": "Restoring Old Graffiti",
+            "#tr": "Eski Grafitinin Onarılması"
+        },
+        "owner": "malisipi",
+        "source_host": "Behance",
+        "source": "https://www.behance.net/gallery/161972177/Restoring-Old-Graffiti",
+        "cover": "restoring-old-graffiti.webp",
+        "demo": null,
+        "likes": 2,
+        "mentions": [],
+        "tools": ["illustrator"],
+        "description": {
+            "#": "Restoring Old Graffiti in My School",
+            "#tr": "Okulumdaki Eski Grafitinin Onarımı"
+        }
+    },
+    {
+        "type": "design",
+        "id": "wolf-line-art",
+        "name": {
+            "#": "Wolf Line Art"
+        },
+        "owner": "malisipi",
+        "source_host": "Behance",
+        "source": "https://www.behance.net/gallery/156974245/Wolf-Line-Art",
+        "cover": "wolf-line-art.webp",
+        "demo": null,
+        "likes": 1,
+        "mentions": [],
+        "tools": ["illustrator"],
+        "description": null
+    }
+]

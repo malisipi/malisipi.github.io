@@ -1,8 +1,0 @@
-#title Old browsers, Ha?
-%include css/old_browsers.css
-%text Hey, It's seems like you are using the <b>oldest</b> browser in the history.
-// %image assets/old_browsers.png
-%text But you still will be able to view my portfolio.
-$project_section
-$contact_section
-%text Also thanks viewing my portfolio with the <b>oldest</b> browser. Have a good day!

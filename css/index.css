@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+* {
+    font-family: 'Noto Sans', sans-serif;
+    color-scheme: dark;
+}
+
+html {
+    position: fixed;
+    overflow: hidden;
+    width: 100dvh;
+}
+  
+body {
+    position: relative;
+    width: 100dvw; 
+    height: 100dvh;
+}
+
+body {
+    background: #333333;
+    overflow-y: hidden;
+    max-height: 100dvh;
+    margin: 0;
+
+    &[dev-mode] {
+        background: #777777;
+    }
+}
+
+body[dialog_open] {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+dialog::before {
+    content: "";
+    position: fixed;
+    background: #00000000;
+    width: 100dvw;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+[variant] {
+    display: none;
+}
+
+html[lang="en"] [variant="en"] {
+    display: unset;
+}
+
+html[lang="tr"] [variant="tr"] {
+    display: unset;
+}
+
+the-book {
+    position: absolute;
+    left: 2dvw;
+    top: 6dvh;
+    bottom: 0dvh;
+}
+
+book-page {
+    position: absolute;
+    left: -5dvw;
+    top: 6dvh;
+    bottom: 0dvh;
+    left: calc(calc(75dvh * var(--page-index)) + 75dvh);
+    rotate: calc(10deg * var(--page-random));
+
+    :is(body[dev-mode]) & {
+        transform: unset !important;
+    }
+}
+
+wolf-claw {
+    position: absolute;
+    bottom: 4dvh;
+    left: 6dvw;
+    height: 25dvh;
+    width: 25dvh;
+    transform: rotate(-10deg);
+
+    :is(body[dev-mode]) & {
+        transform: unset !important;
+    }
+}
+
+wolf-claw[right] {
+    left: unset;
+    right: 6dvw;
+    transform: rotate(10deg);
+}
+
+book-mark {
+    position: absolute;
+    display: block;
+    max-width: 60dvw;
+    height: 8dvh;
+    top: 4dvh;
+    left: calc(calc(102dvh / 100) * 50);
+    background: #996666;
+    z-index: 9;
+    border-radius: 10px 10px 10px 0;
+    --book-mark-extra: "";
+}
+
+@media (max-aspect-ratio: 4/3) {
+    html {
+        width: unset;
+    }
+    
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: unset;
+        max-width: 100dvw;
+    }
+
+    the-book {
+        left: 4dvw;
+        right: 4dvw;        
+    }
+    
+    book-page {
+        left: 4dvw;
+        right: 4dvw;
+        bottom: unset;
+        top: calc(calc(120dvw * var(--page-index)) + 140dvw);
+    }
+
+    book-mark {
+        --book-mark-extra: unset;
+        left: 0;
+        max-width: 80dvw;
+        top: 2dvh;
+        border-left: #996666 10dvw solid;
+        height: 9dvh;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+[tip]:not([tip=""]):is(:focus, :hover)::before,
+[tip="{html}"]:is(:focus, :hover) > .tip {
+    content: attr(tip);
+    background: #996666;
+    padding: 4px;
+    border-radius: 4px;
+    min-width: 100px;
+    font-size: 16px;
+}
+
+[tip]:not(:is([tip=""], [pre-tip]))::before,
+[tip="{html}"] > .tip {
+    content: "";
+    width: 0;
+    color: white;
+    transform: translate(-60%, calc(-100% - 5px));
+    background: #996666;
+    position: absolute;
+    border-radius: 24px;
+    text-align: center;
+}
+
+[tip="{html}"]:is(:focus, :hover)::before {
+    content: unset !important;
+}
+
+:is([tip], [pre-tip]), :is([tip], [pre-tip])::before {
+    transition-duration: 200ms;
+}
+
+[tip="{html}"] > .tip {
+    display: none;
+}
+
+[tip="{html}"]:is(:focus, :hover) > .tip {
+    display: block;
+}
+
+[tip="{html}"]:is(:focus, :hover) > ul.tip:is(.platforms, .tools) {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+[pre-tip]::before {
+    content: attr(pre-tip);
+    position: absolute;
+    background: #996666;
+    padding: 4px;
+    border-radius: 10px;
+    transform: translate(-60%, calc(-60% - 5px));
+    color: white;
+    font-size: 12px;
+}
+
+book-page .details {
+    display: flex;
+    gap: min(2dvw, 1dvh);
+    justify-content: center;
+}
+
+book-page .details app-icon {
+    --icon-size: min(6dvw, 4dvh);
+}
+
+id-pointer[id] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
+}
+
+::selection {
+    background: #AA4444;
+}
