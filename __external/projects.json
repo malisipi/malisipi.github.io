@@ -14,7 +14,7 @@
         "cover": "mui.webp",
         "demo": "https://malisipi.github.io/mui/",
         "license": "Apache-2.0 License",
-        "stars": 85,
+        "stars": 92,
         "forks": 8,
         "platforms": ["linux", "windows", "android", "web"],
         "mentions": ["https://github.com/vlang/awesome-v#user-interface-toolkits"],
@@ -35,8 +35,8 @@
         "cover": "ubuntu-tour.webp",
         "demo": "https://malisipi.github.io/ubuntu-tour/",
         "license": "MPL-2.0 License",
-        "stars": 124,
-        "forks": 36,
+        "stars": 134,
+        "forks": 42,
         "platforms": ["web", "pwa"],
         "mentions": ["https://9to5linux.com/ubuntu-online-21-10-released-lets-you-try-ubuntu-desktop-in-a-web-browser"],
         "description": {
@@ -46,22 +46,40 @@
     },
     {
         "type": "software",
-        "id": "deskvideo",
+        "id": "newflow",
         "name": {
-            "#": "DeskVideo"
+            "#": "NewFlow"
         },
         "owner": "malisipi",
-        "source": "https://github.com/malisipi/DeskVideo",
-        "cover": "deskvideo.webp",
-        "demo": "https://malisipi.github.io/DeskVideo/",
-        "license": "MPL-2.0 License",
+        "source": "https://github.com/malisipi/NewFlow",
+        "cover": "newflow.webp",
+        "license": "Apache-2.0 License",
         "stars": 7,
-        "forks": 1,
-        "platforms": ["web", "pwa", "extension"],
+        "forks": 0,
+        "platforms": ["linux", "windows"],
         "mentions": [],
         "description": {
-            "#": "A video-stream platform fully-customizable front-end",
-            "#tr": "Tamamen özelleştirilebilir bir video akış ön ucu"
+            "#": "A YouTube Client (by Reversing Internal APIs)",
+            "#tr": "Bir YouTube İstemcisi (İç API'leri tersine çevirerek)"
+        }
+    },
+    {
+        "type": "software",
+        "id": "firessb",
+        "name": {
+            "#": "FireSSB"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/FireSSB",
+        "cover": "firessb.webp",
+        "license": "Apache-2.0 License",
+        "stars": 7,
+        "forks": 0,
+        "platforms": ["extension"],
+        "mentions": [],
+        "description": {
+            "#": "Bring back the SSB mode to FireFox!",
+            "#tr": "Tek Site Tarayıcısı (SSB) Modunu FireFox'a Geri Getirin!"
         }
     },
     {
@@ -75,7 +93,7 @@
         "cover": "vebviewjs.webp",
         "demo": null,
         "license": "Apache-2.0 License",
-        "stars": 60,
+        "stars": 67,
         "forks": 2,
         "platforms": ["linux", "windows"],
         "mentions": ["https://github.com/vlang/awesome-v#web"],
@@ -102,6 +120,26 @@
         "description": {
             "#": "Remote Whell for gaming",
             "#tr": "Oyunlar için Kablosuz Direksiyon"
+        }
+    },
+    {
+        "type": "software",
+        "id": "deskvideo",
+        "name": {
+            "#": "DeskVideo"
+        },
+        "owner": "malisipi",
+        "source": "https://github.com/malisipi/DeskVideo",
+        "cover": "deskvideo.webp",
+        "demo": "https://malisipi.github.io/DeskVideo/",
+        "license": "MPL-2.0 License",
+        "stars": 12,
+        "forks": 1,
+        "platforms": ["web", "pwa", "extension"],
+        "mentions": [],
+        "description": {
+            "#": "A video-stream platform fully-customizable front-end",
+            "#tr": "Tamamen özelleştirilebilir bir video akış ön ucu"
         }
     },
     {
@@ -135,7 +173,7 @@
         "cover": "keylogger-blocker.webp",
         "demo": "https://malisipi.github.io/KeyloggerBlocker/",
         "license": "GPL-3 license",
-        "stars": 10,
+        "stars": 11,
         "forks": 1,
         "platforms": ["linux", "windows"],
         "mentions": [],
@@ -156,7 +194,7 @@
         "demo": null,
         "license": "Apache-2.0 License",
         "stars": 35,
-        "forks": 2,
+        "forks": 3,
         "platforms": ["linux", "windows"],
         "mentions": ["https://x.com/v_language/status/1625482422174228486"],
         "description": {
@@ -196,7 +234,7 @@
         "cover": "gezgin-satici.webp",
         "demo": null,
         "license": "MPL-2.0 License",
-        "stars": 8,
+        "stars": 7,
         "forks": 1,
         "platforms": ["linux", "windows"],
         "mentions": [],
@@ -217,7 +255,7 @@
         "demo": "https://malisipi.github.io/MPlayer/",
         "license": "MPL-2.0 License",
         "stars": 4,
-        "forks": 0,
+        "forks": 2,
         "platforms": ["web", "pwa"],
         "mentions": [],
         "description": {
